@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PodPitch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+</head>
+<body>
+    <form>
+        Email:<br>
+        <input type="text" name="email" id="email"><br>
+        Password:<br>
+        <input type="password" name="password" id="password">
+        <button id="login_button">
+            Login
+        </button>
+    </form>
+</body>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDprQgPC5OWoDzrHzIXABeWahxvfySm6ls",
+            authDomain: "podpitch.firebaseapp.com",
+            databaseURL: "https://podpitch.firebaseio.com",
+            projectId: "podpitch",
+            storageBucket: "podpitch.appspot.com",
+            messagingSenderId: "885746487787"
+        };
+        firebase.initializeApp(config);
+    </script>
+</html>
+
+

@@ -7,6 +7,14 @@
 var app = require('../app');
 var debug = require('debug')('podpitch:server');
 var http = require('http');
+var admin = require('firebase-admin');
+var serviceAccount = require("./res/podpitch-firebase-adminsdk-c3ila-9a32dd916c.json");
+
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://podpitch.firebaseio.com"
+});
 
 /**
  * Get port from environment and store in Express.

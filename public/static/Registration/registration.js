@@ -1,5 +1,3 @@
-var rp = require('request-promise');
-
 $(document).ready(function() {
     $('#register_button').click(function(event){
         event.preventDefault(); // prevents refresh
@@ -15,15 +13,12 @@ $(document).ready(function() {
                 console.log("we got here");
                 var currentUser = firebase.auth().currentUser;
                 console.log(currentUser.uid);
-                var options = {
-                    uri: 'localhost:3000/account/api/register',
-                    body: {
-                        name: name,
-                        email: email,
-                        id: currentUser.uid
-                    }
-                };
-                return rp(options);
+                console.log(email);
+
+                return fetch("/account/api/register", {
+                  method: 'post',
+                  body: `name=${name}&email=${email}&id=${currentUser.uid}`,
+                });
             }).then(function(res) {
                 console.log(res);
             }).catch(function(error) {
