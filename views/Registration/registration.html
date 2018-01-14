@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PodPitch</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="registration.js"></script>
+</head>
+<body>
+<form>
+    Name:<br>
+    <input type-="text" name="name" id="Name"><br>
+    Username:<br>
+    <input type="text" name="username" id="username"><br>
+    Email:<br>
+    <input type="email" name="email" id="email"><br>
+    Password:<br>
+    <input type="password" name="password" id="password"><br>
+    Confirm Password:<br>
+    <input type="password" name="confirm_pass" id="confirm_pass">
+
+    <button id="register_button">
+        Register
+    </button>
+</form>
+</body>
+<script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyDprQgPC5OWoDzrHzIXABeWahxvfySm6ls",
+        authDomain: "podpitch.firebaseapp.com",
+        databaseURL: "https://podpitch.firebaseio.com",
+        projectId: "podpitch",
+        storageBucket: "podpitch.appspot.com",
+        messagingSenderId: "885746487787"
+    };
+    firebase.initializeApp(config);
+</script>
+</html>
