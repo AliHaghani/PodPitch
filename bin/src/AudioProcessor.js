@@ -1,7 +1,7 @@
 // AudioProcessor
 let mp3Split = require('mp3-split');
 
-export default class AudioProcessor {
+class AudioProcessor {
 
     constructor(episode, timestamps){
         this.episode = episode
@@ -26,9 +26,10 @@ export default class AudioProcessor {
     generateTemplate(timestamps){
         var template = []
         for (var i = 0; i < timestamps.length; i++) {
-            template.append("[" + timestamps[i] + "]" + " - Part " + i)
+            template.push("[" + timestamps[i] + "]" + " - Part " + i)
         }
         return template
     }
 }
 
+module.exports = AudioProcessor
