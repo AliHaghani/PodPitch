@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build && node dist/bin/www"
+    "start": "npm run build && node dist/bin/www",
+    "test": "mocha tests --recursive --watch"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
